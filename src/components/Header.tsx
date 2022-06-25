@@ -1,4 +1,4 @@
-import { Logo } from "./Logo";
+import { Logo } from "./LogoIgnite";
 
 export function Header() {
   return (

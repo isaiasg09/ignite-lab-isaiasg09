@@ -3,6 +3,7 @@ import { CaretRight, DiscordLogo, FileArrowDown, Image, Lightning } from "phosph
 import '@vime/core/themes/default.css';
 import { Player } from "./Player";
 import { useGetLessonBySlugQuery } from "../graphql/generated";
+import { LogoRocketseat } from "./LogoRocketseat";
 
 interface VideoProps {
   lessonSlug: string;
@@ -27,10 +28,10 @@ export function Video(props: VideoProps) {
 
 
   return (
-    <div className="flex-1">
+    <div className="flex-1 flex flex-col min-h-screen">
       <Player videoId={data.lesson.videoId}/>
 
-      <div className="p-6 max-w-[1100px] mx-auto">
+      <div className="p-6 max-w-[1100px] mx-auto h-full flex flex-col">
         <div className="flex items-start gap-16">
           <div className="flex-1">
             <h1 className="text-2xl font-bold">
@@ -108,8 +109,17 @@ export function Video(props: VideoProps) {
             </div>
           </a>
         </div>
-        <footer className="bg-white h-14">
+        <footer className="h-14 mt-auto flex flex-row justify-between items-center text-gray-300 border-t border-gray-500 pt-5">
+          <div className="flex items-center gap-5">
+            <LogoRocketseat />
+            <span>
+              Rocketseat - todos os direitos reservados
+            </span>
+          </div>
 
+          <span>
+            Políticas de Privacidade
+          </span>
         </footer>
       </div>
 
