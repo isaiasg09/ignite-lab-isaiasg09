@@ -4,6 +4,7 @@ import { Logo } from "../components/LogoIgnite";
 import { useCreateSubscriberMutation } from "../graphql/generated";
 
 import imgUrl from '../../src/assets/code-mockup.png'
+import { LogoRocketseat } from "../components/LogoRocketseat";
 
 export function Subscribe() {
   const navigate = useNavigate()
@@ -81,7 +82,18 @@ export function Subscribe() {
 
       <img src={imgUrl} alt="Code Mockup" className="mt-10" />
 
-      
+      <footer className="w-full mt-auto flex flex-row justify-between items-center text-gray-300 border-t border-gray-500 p-5 bg-gray-900">
+        <div className="flex items-center gap-5">
+          <LogoRocketseat />
+          <span>
+            Rocketseat - todos os direitos reservados
+          </span>
+        </div>
+
+        <span>
+          Políticas de Privacidade
+        </span>
+      </footer>
     </div>
   )
 }
