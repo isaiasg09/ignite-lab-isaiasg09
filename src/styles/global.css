@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-900 text-gray-100;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.active-lesson {
+  position: relative;
+}
+
+.active-lesson:after {
+  content:"";
+  position:absolute;
+  height:0;
+  width:0;
+  right:99%;
+  top:40%;
+  border:12px dotted transparent;
+  border-right: 12px dotted #00875F;
+}
